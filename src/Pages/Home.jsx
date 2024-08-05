@@ -1,15 +1,31 @@
 import { Canvas } from "@react-three/fiber";
-import { Suspense, useState } from "react";
+import { Suspense, useState, useEffect, useRef } from "react";
 import Loader from "../Components/Loader";
 import Island from "../Models/Island";
 import Sky from "../Models/Sky";
 import Bird from "../Models/Bird";
 import Plane from "../Models/Plane";
 import HomeInfo from "../Components/HomeInfo";
+import sakura from "../assets/sakura.mp3";
+import { soundoff, soundon } from "../assets/icons";
 
 const Home = () => {
+  const audioRef = useRef(new Audio(sakura));
+  audioRef.current.volume = 0.4;
+  audioRef.current.loop = true;
   const [isRotating, setIsRotating] = useState(false);
   const [currentStage, setCurrentStage] = useState(1);
+  const [isPlayingMusic, setIsPlayingMusic] = useState(false);
+
+  useEffect(() => {
+    if (isPlayingMusic) {
+      audioRef.current.play();
+    }
+
+    return () => {
+      audioRef.current.pause();
+    };
+  }, [isPlayingMusic]);
 
   const adjustIslandForScreenSize = () => {
     let screenScale = null;
@@ -19,7 +35,7 @@ const Home = () => {
     if (window.innerWidth < 768) {
       screenScale = [0.9, 0.9, 0.9];
     } else {
-      screenScale = [1, 1, 1];
+      screenScale = [1.1, 1.1, 1];
     }
 
     return [screenScale, screenPosition, islandRotation];
@@ -31,7 +47,7 @@ const Home = () => {
       screenScale = [1.5, 1.5, 1.5];
       screenPosition = [0, -1.5, 0];
     } else {
-      screenScale = [3, 3, 3];
+      screenScale = [4.5, 4.5, 4.5];
       screenPosition = [0, -4, -4];
     }
 
@@ -76,12 +92,16 @@ const Home = () => {
           />
           <Plane
             isRotating={isRotating}
-            planeScale={planeScale}
-            planePosition={planePosition}
+            scale={planeScale}
+            position={planePosition}
             rotation={[0, 20, 0]}
           />
         </Suspense>
       </Canvas>
+
+      <div className="absolute bottom-2 left-2">
+        <img src={!isPlayingMusic ? soundoff : soundon} alt="sound" className="w-10 h-10 cursor-pointer object-contain" onClick={() => setIsPlayingMusic(!isPlayingMusic)}/>
+      </div>
     </section>
   );
 };

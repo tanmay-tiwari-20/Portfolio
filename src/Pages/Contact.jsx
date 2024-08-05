@@ -48,37 +48,40 @@ const Contact = () => {
           hideAlert();
           setCurrentAnimation("idle");
           setForm({ name: "", email: "", message: "" });
-        }, [3000]);
+        }, 3000);
       })
       .catch(() => {
         setIsLoading(false);
         setCurrentAnimation("idle");
         showAlert({
           show: true,
-          text: "I didnt receive your message",
+          text: "I didn't receive your message",
           type: "danger",
         });
       });
   };
+
   const handleFocus = () => setCurrentAnimation("walk");
   const handleBlur = () => setCurrentAnimation("idle");
 
   return (
-    <section className="relatie flex lg:flex-row flex-col max-container">
+    <section className="relative flex lg:flex-row flex-col max-container bg-gray-900 text-gray-100">
       {alert.show && <Alert {...alert} />}
-      <div className="flex-1 min-w-[50%] flex flex-col">
-        <h1 className="head-text">Get in Touch</h1>
+      <div className="flex-1 min-w-[50%] flex flex-col p-6 bg-gray-800 rounded-lg shadow-lg">
+        <h1 className="head-text text-gray-100">
+          Get in Touch.
+        </h1>
 
         <form
-          className="w-full flex flex-col gap-7 mt-14"
+          className="w-full flex flex-col gap-7 mt-8"
           onSubmit={handleSubmit}
         >
-          <label className="text-black-500 font-semibold">
+          <label className="text-gray-300 font-semibold">
             Name
             <input
               type="text"
               name="name"
-              className="input"
+              className="input bg-gray-700 text-gray-200 placeholder-gray-400 border-gray-600"
               placeholder="Your Name"
               required
               value={form.name}
@@ -87,12 +90,12 @@ const Contact = () => {
               onBlur={handleBlur}
             />
           </label>
-          <label className="text-black-500 font-semibold">
+          <label className="text-gray-300 font-semibold">
             Email
             <input
               type="email"
               name="email"
-              className="input"
+              className="input bg-gray-700 text-gray-200 placeholder-gray-400 border-gray-600"
               placeholder="Your email"
               required
               value={form.email}
@@ -101,12 +104,12 @@ const Contact = () => {
               onBlur={handleBlur}
             />
           </label>
-          <label className="text-black-500 font-semibold">
+          <label className="text-gray-300 font-semibold">
             Your Message
             <textarea
               name="message"
               rows={4}
-              className="textarea"
+              className="textarea bg-gray-700 text-gray-200 placeholder-gray-400 border-gray-600"
               placeholder="Let me know how I can help you!"
               required
               value={form.message}
@@ -117,7 +120,7 @@ const Contact = () => {
           </label>
           <button
             type="submit"
-            className="btn"
+            className="btn bg-blue-600 text-gray-200 hover:bg-blue-500"
             disabled={isLoading}
             onFocus={handleFocus}
             onBlur={handleBlur}
@@ -137,13 +140,13 @@ const Contact = () => {
           }}
         >
           <directionalLight intensity={2.5} position={[0, 0, 1]} />
-          <ambientLight intensity={0.2} />
+          <ambientLight intensity={0.3} />
           <Suspense fallback={<Loader />}>
             <Fox
               currentAnimation={currentAnimation}
               position={[0.5, 0.35, 0]}
               rotation={[12.6, -0.9, 0]}
-              scale={[0.65, 0.65, 0.65]}
+              scale={[0.5, 0.5, 0.5]}
             />
           </Suspense>
         </Canvas>

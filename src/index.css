@@ -9,6 +9,16 @@
   --green-rgb: 125 161 35;
 }
 
+::-webkit-scrollbar{
+  width: 5px;
+  background-color: #015ccbc6;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #F3F4F6;
+  border-radius: 50%;
+}
+
 body {
   font-family: "Work Sans", sans-serif;
 }
@@ -75,7 +85,7 @@ body:has(.card[data-color="green"]:hover) {
   }
 
   .cta-text {
-    @apply text-black-500 font-extrabold flex-1 text-3xl max-md:text-center;
+    @apply text-slate-100 font-extrabold flex-1 text-3xl max-md:text-center;
   }
 }
 
@@ -102,6 +112,7 @@ body:has(.card[data-color="green"]:hover) {
 
 .block-container .btn-back {
   position: absolute;
+  background-color: #687ab48f;
   inset: 0;
   z-index: -1;
   width: inherit;
@@ -111,7 +122,7 @@ body:has(.card[data-color="green"]:hover) {
   transform-origin: bottom right;
   transform: rotateZ(15deg);
   will-change: transform;
-  box-shadow: 16px 0 40px #e4e4e4;
+  box-shadow: 16px 0 40px #97aee1;
 }
 
 .block-container .btn-back-red {
@@ -148,7 +159,7 @@ body:has(.card[data-color="green"]:hover) {
   z-index: 1;
   width: inherit;
   height: inherit;
-  background-color: #ffffff33;
+  background-color: #ffffffbd;
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   transition: 250ms;

@@ -1,5 +1,5 @@
 import { Canvas } from "@react-three/fiber";
-import { Suspense, useState, useEffect, useRef,lazy } from "react";
+import { Suspense, useState, useEffect, useRef, lazy } from "react";
 import Loader from "../Components/Loader";
 import Sky from "../Models/Sky.jsx";
 import Bird from "../Models/Bird.jsx";
@@ -7,7 +7,7 @@ import Plane from "../Models/Plane.jsx";
 import HomeInfo from "../Components/HomeInfo";
 import nature from "../assets/nature.mp3";
 import { soundoff, soundon } from "../assets/icons";
-const Island = lazy(() => import('../Models/Island'));
+const Island = lazy(() => import("../Models/Island"));
 
 const Home = () => {
   const audioRef = useRef(new Audio(nature));
@@ -100,7 +100,12 @@ const Home = () => {
       </Canvas>
 
       <div className="absolute bottom-2 left-2">
-        <img src={!isPlayingMusic ? soundoff : soundon} alt="sound" className="w-10 h-10 cursor-pointer object-contain" onClick={() => setIsPlayingMusic(!isPlayingMusic)}/>
+        <img
+          src={!isPlayingMusic ? soundoff : soundon}
+          alt="sound"
+          className="w-10 h-10 cursor-pointer object-contain"
+          onClick={() => setIsPlayingMusic(!isPlayingMusic)}
+        />
       </div>
     </section>
   );

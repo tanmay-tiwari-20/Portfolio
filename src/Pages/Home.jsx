@@ -1,13 +1,13 @@
 import { Canvas } from "@react-three/fiber";
-import { Suspense, useState, useEffect, useRef } from "react";
+import { Suspense, useState, useEffect, useRef,lazy } from "react";
 import Loader from "../Components/Loader";
-import Island from "../Models/Island.jsx";
 import Sky from "../Models/Sky.jsx";
 import Bird from "../Models/Bird.jsx";
 import Plane from "../Models/Plane.jsx";
 import HomeInfo from "../Components/HomeInfo";
 import nature from "../assets/nature.mp3";
 import { soundoff, soundon } from "../assets/icons";
+const Island = lazy(() => import('../Models/Island'));
 
 const Home = () => {
   const audioRef = useRef(new Audio(nature));

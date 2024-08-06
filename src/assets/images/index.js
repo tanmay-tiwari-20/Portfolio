@@ -1,4 +1,3 @@
-import hero from './hero.jpg'
 import hacknchill from './hacknchill.png'
 import codecubicle from './codecubicle.png'
 import devdynamos from './devdynamos.png'
@@ -13,7 +12,6 @@ import insta from './insta.png'
 import logo from './logo.svg'
 
 export {
-    hero,
     hacknchill,
     codecubicle,
     devdynamos,

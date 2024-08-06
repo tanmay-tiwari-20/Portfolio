@@ -1,13 +1,13 @@
 import { Canvas } from "@react-three/fiber";
-import { Suspense, useState, useEffect, useRef, lazy } from "react";
+import { Suspense, useState, useEffect, useRef } from "react";
 import Loader from "../Components/Loader";
-import Sky from "../Models/Sky.jsx";
-import Bird from "../Models/Bird.jsx";
-import Plane from "../Models/Plane.jsx";
+import Island from "../Models/island";
+import Sky from "../Models/Sky";
+import Bird from "../Models/Bird";
+import Plane from "../Models/Plane";
 import HomeInfo from "../Components/HomeInfo";
 import nature from "../assets/nature.mp3";
 import { soundoff, soundon } from "../assets/icons";
-const Island = lazy(() => import("../Models/Island"));
 
 const Home = () => {
   const audioRef = useRef(new Audio(nature));
@@ -40,6 +40,7 @@ const Home = () => {
 
     return [screenScale, screenPosition, islandRotation];
   };
+  
   const adjustPlaneForScreenSize = () => {
     let screenScale, screenPosition;
 
@@ -54,8 +55,7 @@ const Home = () => {
     return [screenScale, screenPosition];
   };
 
-  const [islandScale, islandPosition, islandRotation] =
-    adjustIslandForScreenSize();
+  const [islandScale, islandPosition, islandRotation] = adjustIslandForScreenSize();
   const [planeScale, planePosition] = adjustPlaneForScreenSize();
 
   return (

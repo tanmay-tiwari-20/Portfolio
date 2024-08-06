@@ -5,7 +5,7 @@ import CTA from '../Components/CTA';
 
 const Projects = () => {
   return (
-    <section className="max-container bg-gray-900 text-gray-200">
+    <section className="max-container bg-gray-900 text-gray-200 py-12">
       <h1 className="head-text text-gray-100">
         My{" "}
         <span className="blue-gradient_text font-semibold drop-shadow-lg">
@@ -13,8 +13,8 @@ const Projects = () => {
         </span>
       </h1>
 
-      <div>
-        <p className="mt-5 flex flex-col gap-3 text-gray-400">
+      <div className="mt-8">
+        <p className="text-gray-400">
           Worked on a range of dynamic web projects, including interactive 3D
           websites, React applications, and visually engaging clones of
           high-profile websites. Specialized in integrating advanced animations,
@@ -24,32 +24,44 @@ const Projects = () => {
 
       <div className="flex flex-wrap my-20 gap-16">
         {projects.map((project) => (
-          <div className="lg:w-[400px] w-full bg-gray-800 rounded-lg shadow-lg" key={project.name}>
-            <div className="block-container w-12 h-12">
-              <div className={`btn-back rounded-xl ${project.theme} bg-gray-700`} />
-              <div className="btn-front bg-gray-800 rounded-xl flex justify-center items-center">
-                <img
-                  src={project.iconUrl}
-                  alt="Project Icon"
-                  className="w-1/2 h-1/2 object-contain"
-                />
-              </div>
+          <div
+            className="lg:w-[400px] w-full bg-gray-800 rounded-lg shadow-lg overflow-hidden"
+            key={project.name}
+          >
+            {/* Project Image */}
+            <div className="relative">
+              <img
+                src={project.imageUrl}
+                alt={`${project.name} Thumbnail`}
+                className="w-full h-48 object-cover"
+              />
             </div>
-            <div className="mt-5 flex flex-col p-4">
-              <h4 className="text-2xl font-poppins font-semibold text-gray-100">
+
+            <div className="p-4">
+              <h4 className="text-2xl font-poppins font-semibold text-gray-100 mb-2">
                 {project.name}
               </h4>
-              <p className="mt-2 text-gray-400">{project.description}</p>
-              <div className="mt-5 flex items-center gap-2 font-poppins">
-                <Link
-                  to={project.link}
+              <p className="text-gray-400 mb-4">{project.description}</p>
+
+              <div className="flex items-center gap-4">
+                {project.githubLink && (
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn bg-blue-600 text-gray-100 hover:bg-blue-700 flex items-center"
+                  >
+                    View GitHub
+                  </a>
+                )}
+                <a
+                  href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-semibold text-blue-500 hover:text-blue-300"
+                  className="btn bg-blue-600 text-gray-100 hover:bg-blue-700"
                 >
-                  Live Link
-                </Link>
-                <img src={arrow} alt="arrow" className="w-4 h-4 object-contain text-blue-400" />
+                  View Live Site
+                </a>
               </div>
             </div>
           </div>

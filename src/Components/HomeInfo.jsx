@@ -10,7 +10,7 @@ const HomeInfo = ({ currentStage }) => {
         <span className='font-semibold mx-2 text-white'>Tanmay Tiwari</span>
         👋
         <br />
-        A Web Developer from India 
+        A Web Developer from Delhi, India 
       </h1>
     );
 

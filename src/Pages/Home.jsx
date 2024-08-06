@@ -6,11 +6,11 @@ import Sky from "../Models/Sky";
 import Bird from "../Models/Bird";
 import Plane from "../Models/Plane";
 import HomeInfo from "../Components/HomeInfo";
-import sakura from "../assets/sakura.mp3";
+import nature from "../assets/nature.mp3";
 import { soundoff, soundon } from "../assets/icons";
 
 const Home = () => {
-  const audioRef = useRef(new Audio(sakura));
+  const audioRef = useRef(new Audio(nature));
   audioRef.current.volume = 0.4;
   audioRef.current.loop = true;
   const [isRotating, setIsRotating] = useState(false);

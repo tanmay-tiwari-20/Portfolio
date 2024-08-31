@@ -10,6 +10,7 @@ import premier from './premier.png'
 import githubImage from './github.png'
 import insta from './insta.png'
 import logo from './logo.svg'
+import pinterest from './pinterest.png'
 
 export {
     hacknchill,
@@ -23,5 +24,6 @@ export {
     premier,
     githubImage,
     insta,
-    logo
+    logo,
+    pinterest,
 }

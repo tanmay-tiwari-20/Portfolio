@@ -1,4 +1,17 @@
-import { codecubicle, hacknchill, devdynamos, codeverse, apple, ochi, refokus, obys, premier, githubImage, insta } from "../assets/images";
+import {
+  codecubicle,
+  hacknchill,
+  devdynamos,
+  codeverse,
+  apple,
+  ochi,
+  refokus,
+  obys,
+  premier,
+  githubImage,
+  insta,
+  pinterest,
+} from "../assets/images";
 import {
   car,
   contact,
@@ -21,6 +34,7 @@ import {
   summiz,
   tailwindcss,
   threads,
+  express,
 } from "../assets/icons";
 
 export const skills = [
@@ -48,6 +62,11 @@ export const skills = [
     imageUrl: javascript,
     name: "JavaScript",
     type: "Frontend",
+  },
+  {
+    imageUrl: express,
+    name: "Express",
+    type: "Backend",
   },
   {
     imageUrl: mongodb,
@@ -167,15 +186,23 @@ export const projects = [
     description:
       "Recreated the Apple iPhone 15 Pro website with GSAP animations and Three.js 3D effects. This project enhanced my skills in 3D modeling and advanced web animations. The result reflects high standards in design and functionality.",
     link: "https://apple-i-phone15-theta.vercel.app/",
-    githubLink: "https://github.com/tanmay-tiwari-20/Apple-iPhone15"
+    githubLink: "https://github.com/tanmay-tiwari-20/Apple-iPhone15",
+  },
+  {
+    name: "Pinterest Clone",
+    imageUrl: pinterest,
+    description:
+      "Pinterest Clone is a web application replicating Pinterest's core features, including user profiles, post uploading, and a dynamic feed. Built with Express, MongoDB, Mongoose.js, and EJS, this project highlights full-stack development skills with a focus on content management and user interaction.",
+    link: "https://pinterest-47vi.onrender.com/",
+    githubLink: "https://github.com/tanmay-tiwari-20/Pinterest",
   },
   {
     name: "Ochi Clone",
     imageUrl: ochi,
     description:
-      'Cloned the OCHI website using React and Tailwind CSS. This project improved my understanding of React components and responsive design, closely mirroring the original’s professional look.',
+      "Cloned the OCHI website using React and Tailwind CSS. This project improved my understanding of React components and responsive design, closely mirroring the original’s professional look.",
     link: "https://ochi-clone-delta.vercel.app/",
-    githubLink: "https://github.com/tanmay-tiwari-20/ochi-clone"
+    githubLink: "https://github.com/tanmay-tiwari-20/ochi-clone",
   },
   {
     name: "Refokus Clone",
@@ -183,7 +210,7 @@ export const projects = [
     description:
       "Recreated the Refokus website with React, Tailwind CSS, Locomotive Scroll, and Framer Motion. This project refined my skills in web development and animation, replicating a high-quality, award-winning design.",
     link: "https://refokus-liard.vercel.app/",
-    githubLink: "https://github.com/tanmay-tiwari-20/Refokus"
+    githubLink: "https://github.com/tanmay-tiwari-20/Refokus",
   },
   {
     name: "Obys Agency Website",
@@ -191,21 +218,22 @@ export const projects = [
     description:
       "Developed a clone of the Obys Agency website using HTML, CSS, and JavaScript. This was my first project incorporating JavaScript, utilizing Locomotive Scroll, GSAP, Shery.js, and Textillate.js for advanced animations and effects. The project enhanced my skills in web design and interactive features.",
     link: "https://tanmay-tiwari-20.github.io/obys-agency/",
-    githubLink: "https://github.com/tanmay-tiwari-20/obys-agency"
+    githubLink: "https://github.com/tanmay-tiwari-20/obys-agency",
   },
   {
     name: "Model Management Website - Premier",
     imageUrl: premier,
-    description:"Developed my first website, Premier, a model management website, using only HTML and CSS. This project marked the beginning of my web development journey and provided a solid foundation in creating clean, functional web pages.",
+    description:
+      "Developed my first website, Premier, a model management website, using only HTML and CSS. This project marked the beginning of my web development journey and provided a solid foundation in creating clean, functional web pages.",
     link: "https://tanmay-tiwari-20.github.io/premier/",
-    githubLink: "https://github.com/tanmay-tiwari-20/premier"
+    githubLink: "https://github.com/tanmay-tiwari-20/premier",
   },
-//   {
-//     iconUrl: summiz,
-//     theme: "btn-back-yellow",
-//     name: "AI Summarizer Application",
-//     description:
-//       "App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.",
-//     link: "https://github.com/adrianhajdin/project_ai_summarizer",
-//   },
+  //   {
+  //     iconUrl: summiz,
+  //     theme: "btn-back-yellow",
+  //     name: "AI Summarizer Application",
+  //     description:
+  //       "App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.",
+  //     link: "https://github.com/adrianhajdin/project_ai_summarizer",
+  //   },
 ];

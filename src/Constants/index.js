@@ -11,6 +11,7 @@ import {
   githubImage,
   insta,
   pinterest,
+  shirt,
 } from "../assets/images";
 import {
   car,
@@ -180,6 +181,14 @@ export const socialLinks = [
 ];
 
 export const projects = [
+  {
+    name: "3D Shirt Showcaser",
+    imageUrl: shirt,
+    description:
+      "3D Shirt Showcaser is an interactive web app built with React, Three.js, and Tailwind CSS that allows users to customize and visualize 3D shirt models in real time. Users can apply different textures or colors, offering a dynamic product interaction experience. This project highlights the integration of 3D graphics into web development for a more engaging interface.",
+    link: "https://shirt-showcaser.vercel.app/",
+    githubLink: "https://github.com/tanmay-tiwari-20/shirt-showcaser",
+  },
   {
     name: "Apple Website",
     imageUrl: apple,

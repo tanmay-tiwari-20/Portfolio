@@ -12,12 +12,10 @@ import {
   insta,
   pinterest,
   shirt,
+  spools,
 } from "../assets/images";
 import {
-  car,
-  contact,
   css,
-  estate,
   git,
   github,
   html,
@@ -28,13 +26,9 @@ import {
   mui,
   nextjs,
   nodejs,
-  pricewise,
   react,
   redux,
-  snapgram,
-  summiz,
   tailwindcss,
-  threads,
   express,
 } from "../assets/icons";
 
@@ -181,6 +175,14 @@ export const socialLinks = [
 ];
 
 export const projects = [
+  {
+    name: "Spools",
+    imageUrl: spools,
+    description:
+      "Spools: A MERN stack social media platform inspired by Threads, featuring real-time chatting, image posting, liking, and replying. Built with React, Node.js, Express, and MongoDB. Includes functionalities like user authentication, profile updates, Cloudinary for media management, and responsive design with Tailwind CSS.",
+    link: "https://spools.onrender.com/",
+    githubLink: "https://github.com/tanmay-tiwari-20/Spools",
+  },
   {
     name: "3D Shirt Showcaser",
     imageUrl: shirt,

@@ -12,6 +12,7 @@ import insta from './insta.png'
 import logo from './logo.svg'
 import pinterest from './pinterest.png'
 import shirt from './shirt.png'
+import spools from './spools.png'
 
 export {
     hacknchill,
@@ -28,4 +29,5 @@ export {
     logo,
     pinterest,
     shirt,
+    spools,
 }

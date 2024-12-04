@@ -13,6 +13,7 @@ import {
   pinterest,
   shirt,
   spools,
+  hwi,
 } from "../assets/images";
 import {
   css,
@@ -128,6 +129,18 @@ export const experiences = [
       "Worked on a project named Agriconnect with my team to help farmers by providing them with essential resources and support.",
       "Learned the importance of presentation in competition, understanding how effectively communicating ideas can significantly impact success.",
       "Realized that I have much to learn from such experiences, recognizing the value of continuous improvement and adaptation.",
+    ],
+  },
+  {
+    title: "Code4Cause 2.0",
+    company_name: "Ranked 8th among 150+ teams",
+    icon: hwi,
+    iconBg: "#1A1A1A",
+    points: [
+      "Reached the top 8 among numerous teams in a competitive 30-hour live hackathon, demonstrating innovation, problem-solving, and technical expertise under pressure.",
+      "Successfully led my team, Dev Coders, emphasizing strong teamwork, effective communication, and task delegation to deliver a viable solution within the deadline.",
+      "Gained invaluable hands-on experience in live hackathon dynamics, including rapid ideation, development, and showcasing solutions to a panel of judges.",
+      "Overcame challenges such as tight schedules and limited resources, proving adaptability, resilience, and focus on delivering impactful results despite external constraints.",
     ],
   },
   {

@@ -14,6 +14,7 @@ import {
   shirt,
   spools,
   hwi,
+  baithak,
 } from "../assets/images";
 import {
   css,
@@ -195,6 +196,14 @@ export const projects = [
       "Spools: A MERN stack social media platform inspired by Threads, featuring real-time chatting, image posting, liking, and replying. Built with React, Node.js, Express, and MongoDB. Includes functionalities like user authentication, profile updates, Cloudinary for media management, and responsive design with Tailwind CSS.",
     link: "https://spools.onrender.com/",
     githubLink: "https://github.com/tanmay-tiwari-20/Spools",
+  },
+  {
+    name: "Baithak",
+    imageUrl: baithak,
+    description:
+      "Baithak is a Next.js-powered video calling and meeting platform with multi-user conferencing, scheduled meetings, personal meeting rooms, and recording functionality. Built using Next.js, TypeScript, Clerk for authentication, and Stream for real-time video calls, Baithak provides a seamless and secure virtual meeting experience.",
+    link: "https://baithak-ten.vercel.app/",
+    githubLink: "https://github.com/tanmay-tiwari-20/Baithak",
   },
   {
     name: "3D Shirt Showcaser",

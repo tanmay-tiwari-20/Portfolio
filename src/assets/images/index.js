@@ -14,6 +14,7 @@ import pinterest from "./pinterest.png";
 import shirt from "./shirt.png";
 import spools from "./spools.png";
 import hwi from "./hwi.png";
+import baithak from "./baithak.png";
 
 export {
   hacknchill,
@@ -32,4 +33,5 @@ export {
   shirt,
   spools,
   hwi,
+  baithak,
 };
